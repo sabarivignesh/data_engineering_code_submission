@@ -103,7 +103,7 @@ class DataModelApiIcelandTestCaseTwo():
         cursor = self.connection.cursor()
 
         cursor.execute(
-        """select count(distinct a.from) from iceland.drivers as a
+        """select count(distinct a.from) from iceland.samferda_drivers as a
         """)
         count = cursor.fetchall()
 
