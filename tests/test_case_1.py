@@ -84,7 +84,7 @@ class DataModelApiIcelandTestCaseOne():
         cursor = self.connection.cursor()
 
         cursor.execute(
-        """select cast(count(*) as integer) from iceland.drivers
+        """select cast(count(*) as integer) from iceland.samferda_drivers
         """)
         count = cursor.fetchall()
 
