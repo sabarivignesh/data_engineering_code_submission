@@ -26,5 +26,16 @@ def main():
     if not iceland_concerts_etl.run(): # This populates the table
         raise Exception("ETL Job failed: api_iceland_concerts")
 
+    #Earthquakes
+    from data_models.data_model_api_iceland_earthquakes import DataModelApiIcelandEarthquakes
+    iceland_earthquakes_data_model = DataModelApiIcelandEarthquakes()
+    iceland_earthquakes_data_model.drop_table() # Start fresh every time
+    iceland_earthquakes_data_model.create_table() # This creates the table
+
+    from etl.iceland_api.api_iceland_earthquakes import ApiIcelandEarthquakes
+    iceland_earthquakes_etl = ApiIcelandEarthquakes()
+    if not iceland_earthquakes_etl.run(): # This populates the table
+        raise Exception("ETL Job failed: api_iceland_earthquakes")    
+        
 if __name__ == "__main__":
     main()
