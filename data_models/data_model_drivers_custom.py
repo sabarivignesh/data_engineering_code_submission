@@ -32,7 +32,7 @@ class DataModelApiIcelandDriversCustom():
 
         cursor.execute(
         """
-            create table iceland.drivers as
+            create table iceland.samferda_drivers as
             select x.from, x.to, to_timestamp(extract(epoch from (x.date+x.time)))::timestamp without time zone as timestamp
             from
             (select a.from, a.to, a.date, to_timestamp(case when lower(a.time) like 'any%' then '01:00:00' when lower(a.time) like 'morning%' then '09:00:00' when lower(a.time) like 'afternoon%' then '13:00:00' when lower(a.time) like 'evening%' then '18:00:00' when lower(a.time) like '%am' then case when lower(a.time) like '1%' then '01:00:00'
@@ -74,6 +74,6 @@ class DataModelApiIcelandDriversCustom():
         cursor.execute(
 
          """
-            drop table if exists iceland.drivers
+            drop table if exists iceland.samferda_drivers
         """)
         self.connection.commit()
