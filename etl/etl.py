@@ -169,6 +169,7 @@ class LocalJSONFileJob(ETLJob):
         for item in items:
             row = []
             for prop in self.properties_to_extract:
+                item[prop] = str(item[prop])
                 row.append(item[prop])
             parsed_data.append(row)
 
