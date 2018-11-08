@@ -2,7 +2,7 @@
 
 ## Overview:
 
-ETL Pipeline is tested with three test scenarios to ensure the intended workflow:
+ETL Pipeline is tested with three test scenarios to ensure that the data that has been loaded from a source to the destination after business transformation is accurate.
 
 ### Data Completeness Validation:
         
