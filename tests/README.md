@@ -61,6 +61,9 @@ ETL Pipeline is tested with three test scenarios to ensure that the data that ha
     Datatype of columns in target system are in-line with the business requirement document.
     Table structure is in-line with the business requirement structure.
 
+## Scope of Test cases:
+
+Current scope of the ETL Testing cases are done from an User acceptance point of view.
 	
  
 
