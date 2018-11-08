@@ -53,6 +53,21 @@ def main():
     iceland_drivers_custom_data_model = DataModelApiIcelandDriversCustom()
     iceland_drivers_custom_data_model.drop_drivers()
     iceland_drivers_custom_data_model.create_drivers()    
+    
+    #Test case - 1
+    from tests.test_case_1 import DataModelApiIcelandTestCaseOne
+    test_case_one = DataModelApiIcelandTestCaseOne()
+    test_case_one.test_case_one()
+
+    #Test Case - 2
+    from tests.test_case_2 import DataModelApiIcelandTestCaseTwo
+    test_case_two = DataModelApiIcelandTestCaseTwo()
+    test_case_two.test_case_two()
+
+    #Test Case - 3
+    from tests.test_case_3 import DataModelApiIcelandTestCaseThree
+    test_case_three = DataModelApiIcelandTestCaseThree()
+    test_case_three.test_case_three()
         
 if __name__ == "__main__":
     main()
